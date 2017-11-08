@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functional Programming Test Ground</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="jumbotron">
+                    <h1>Functional Programming Samples</h1>
+                </div>
+
+                <div class="tool-container">
+                    <h2>Convert a string to title case</h2>
+                    <input type="text" id="toTittle" class="form-control" onkeypress="return searchKeyPress(event)">
+                    <button id='toTittleBtn' class="btn btn-primary" onclick="titleCase()">Convert</button>
+                    <h3>Compiled Value</h3>
+                    <p id='compileVal'></p>
+                </div>
+
+                <div class="tool-container">
+                    <h2>Palindrome Checker</h2>
+                    <span>A palimdrome is a word that can be read the same backwards as forwards</span>
+                    <div id="insert">
+                        <span>Is this word a palindrome?</span>
+                        <input id="candidate" class="form-control" type="text">
+                        <button class="btn btn-primary" onClick="palindrome(document.getElementById('candidate').value)">
+                            Check</button>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>
+                            Result
+                        </h3>
+                        <span id="result"> </span>
+                    </div>
+                </div>
+
+                <div class="tool-container">
+                    <h2>Largest Numbers Single Array</h2>
+                    <span>Creates a single array containing the largest number in nested arrays</span>
+                    <div class="nested">
+                        <ul id="nested-parent">
+
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" onClick="largestOfFour()">
+                        Return Single Array
+                    </button>
+
+                    <div>
+                        <h3>
+                            Result
+                        </h3>
+                        <span id="arrResult"> </span>
+                    </div>
+                </div>
+
+                <div class="tool-container">
+                    <h2>Confirm Ending</h2>
+                    <span>Check whether string ends with provided ending</span>
+
+                    <hr>
+
+                    <label for="providedString">String to check</label>
+                    <input type="text" id="providedString" class="form-control" onkeypress="return matchKeyPress(event)">
+
+                    <label for="providedEnding">Ending to check</label>
+                    <input type="text" id="providedEnding" class="form-control" onkeypress="return matchKeyPress(event)">
+
+                    <button id="checkEnding" class="btn btn-primary" onClick="confirmEnding()">
+                        Check
+                    </button>
+
+                    <div>
+                        <h3>
+                            Result
+                        </h3>
+                        <span id="matchResult"> </span>
+                    </div>
+                </div>
+
+                <div class="tool-container">
+                    <h2>String repeater</h2>
+                    <span>Repeat a string by number provided</span>
+
+                    <hr>
+
+                    <label for="providedString">String to check</label>
+                    <input type="text" id="stringToRepeat" class="form-control" onkeypress="return repeatPress(event)" required>
+
+                    <label for="providedEnding">Ending to check</label>
+                    <input type="number" id="timesToRepeat" class="form-control" onkeypress="return repeatPress(event)" required>
+
+                    <button id="repeatStringClick" class="btn btn-primary" onClick="repeatStringNumTimes()">
+                        Check
+                    </button>
+
+                    <div>
+                        <h3>
+                            Result
+                        </h3>
+                        <p id="repeatResult"> </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/title-case.js"></script>
+    <script src="./scripts/palindrome-checker.js"></script>
+    <script src="./scripts/largest-of-four.js"></script>
+    <script src="./scripts/confirm-ending.js"></script>
+    <script src="./scripts/repeat-string-num-times.js"></script>
+</body>
+
+</html>

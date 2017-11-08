@@ -1,0 +1,42 @@
+/* Main Styles */
+
+p,
+span {
+    overflow-wrap: break-word;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+.tool-container {
+    display: block;
+    min-height: 5em;
+    padding: 1em;
+    border: 1px solid rgb(10, 10, 10);
+    border-bottom: 0;
+}
+
+div.tool-container:last-child {
+    border-bottom: 1px solid rgb(10, 10, 10);
+}
+
+
+/* Bootstrap over writes */
+
+.container {
+    width: 100%;
+}
+
+.row {
+    margin: 2em auto;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.bg-success,
+.bg-danger {
+    padding: 1em;
+}
