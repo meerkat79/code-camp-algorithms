@@ -6,7 +6,8 @@ Simple clone this repo to your project directory of choice
 
 `git clone https://github.com/meerkat79/code-camp-algorithms.git`
 
-Then run: `npm install`
+Then run: `npm install`  
+Also run: `npm install http-server -g`
 
 to add small webserver for convenience.
 Next run: `http-server`
