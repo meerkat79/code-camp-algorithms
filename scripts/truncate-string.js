@@ -1,3 +1,7 @@
+/*
+@truncateString: function to truncate a string based on conditions
+*/
+
 function truncateString() {
 
     var stringToTruncate = document.getElementById('stringToTruncate');
@@ -6,25 +10,32 @@ function truncateString() {
     var indexToTruncateVal = indexToTruncate.value;
     var truncateArr = stringToTruncateVal.split('');
 
-    if (stringToTruncateVal.length > indexToTruncateVal) {
+    if (stringToTruncateVal == undefined || stringToTruncateVal == '' || indexToTruncateVal == undefined || indexToTruncateVal == '') {
+        alert('Please enter a valid values');
+    } else {
 
-        if (indexToTruncateVal <= 3) {
-            truncateArr.splice(indexToTruncateVal, stringToTruncateVal.length, '...');
-            var humpty = truncateArr.join('');
-            var res = document.getElementById('truncateResult');
-            res.innerHTML = humpty;
+        if (stringToTruncateVal.length > indexToTruncateVal) {
+
+            if (indexToTruncateVal <= 3) {
+                truncateArr.splice(indexToTruncateVal, stringToTruncateVal.length, '...');
+                var humpty = truncateArr.join('');
+                var res = document.getElementById('truncateResult');
+                res.innerHTML = humpty;
+
+            } else {
+                truncateArr.splice(indexToTruncateVal - 3, stringToTruncateVal.length, '...');
+                var humpty = truncateArr.join('');
+                var res = document.getElementById('truncateResult');
+                res.innerHTML = humpty;
+            }
 
         } else {
-            truncateArr.splice(indexToTruncateVal - 3, stringToTruncateVal.length, '...');
-            var humpty = truncateArr.join('');
             var res = document.getElementById('truncateResult');
-            res.innerHTML = humpty;
+            res.innerHTML = stringToTruncateVal;
         }
-
-    } else {
-        var res = document.getElementById('truncateResult');
-        res.innerHTML = stringToTruncateVal;
     }
+
+
 }
 
 function truncatePress(e) {
