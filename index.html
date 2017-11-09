@@ -114,6 +114,30 @@
                     </div>
                 </div>
 
+                <div class="tool-container">
+                    <h2>Trucate String</h2>
+                    <span>Truncate a string based on a given integer</span>
+
+                    <hr>
+
+                    <label for="stringToTruncate">String to truncate</label>
+                    <input type="text" id="stringToTruncate" class="form-control" onkeypress="return truncatePress(event)" required>
+
+                    <label for="indexToTruncate">Truncate at character x of string</label>
+                    <input type="number" id="indexToTruncate" class="form-control" onkeypress="return truncatePress(event)" required>
+
+                    <button id="truncateStringClick" class="btn btn-primary" onClick="truncateString()">
+                        Check
+                    </button>
+
+                    <div>
+                        <h3>
+                            Result
+                        </h3>
+                        <p id="truncateResult"> </p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -125,6 +149,7 @@
     <script src="./scripts/largest-of-four.js"></script>
     <script src="./scripts/confirm-ending.js"></script>
     <script src="./scripts/repeat-string-num-times.js"></script>
+    <script src="./scripts/truncate-string.js"></script>
 </body>
 
 </html>
