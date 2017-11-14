@@ -15,14 +15,12 @@ function twoDarr() {
         alert('Please make valid entries to create your two dimensional array');
     } else {
 
-        console.log(originalArr);
         var futureArr = [];
 
         for (var i = 0; i < originalArr.length; i + twoDindexVal) {
             futureArr.push(originalArr.splice(0, twoDindexVal));
         }
 
-        console.log(twoDarrayRes.children);
 
         if (twoDarrayRes.children.length > 0) {
             console.log('elements exist');
