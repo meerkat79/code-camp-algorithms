@@ -186,6 +186,30 @@
                     </div>
                 </div>
 
+                <div class="tool-container">
+                    <h2>Array item matcher</h2>
+                    <span>Check if items entered in first array will match with items in second array. Only type items you wish to be seen in array!</span>
+
+                    <hr>
+
+                    <label for="field1">Array Entry 1</label>
+                    <input type="text" id="field1" class="form-control">
+
+                    <label for="field2">Array entry 2</label>
+                    <input type="text" id="field2" class="form-control">
+
+                    <button id="matcher" class="btn btn-primary" onClick="matchArr()">
+                        Match?
+                    </button>
+
+                    <div>
+                        <h3>
+                            Result
+                        </h3>
+                        <p id="matcherRes"> </p>
+                    </div>
+                </div>                
+
             </div>
 
         </div>
@@ -199,6 +223,7 @@
     <script src="./scripts/repeat-string-num-times.js"></script>
     <script src="./scripts/truncate-string.js"></script>
     <script src="./scripts/2d-array.js"></script>
+    <script src="./scripts/string-matcher.js"></script>
     <script src="./scripts/general.js"></script>
 </body>
 
